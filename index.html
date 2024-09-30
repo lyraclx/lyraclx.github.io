@@ -175,13 +175,66 @@
             color: #00BFFF;
             text-decoration: underline;
         }
+
+        /* Mobile Responsiveness */
+        @media (max-width: 768px) {
+            .about-section {
+                padding: 20px;
+            }
+
+            .about-section h1 {
+                font-size: 2em;
+            }
+
+            .about-section p {
+                font-size: 1em;
+            }
+
+            .profile-picture {
+                width: 80px;
+                height: 80px;
+            }
+
+            .github-logo {
+                width: 35px;
+                height: 35px;
+            }
+
+            .modal-content {
+                width: 80%;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .about-section h1 {
+                font-size: 1.5em;
+            }
+
+            .about-section p {
+                font-size: 0.9em;
+            }
+
+            .profile-picture {
+                width: 60px;
+                height: 60px;
+            }
+
+            .github-logo {
+                width: 30px;
+                height: 30px;
+            }
+
+            .modal-content {
+                width: 90%;
+            }
+        }
     </style>
 </head>
 <body>
 <div class="container">
     <section class="about-section" id="aboutSection">
         <h1>About Me</h1>
-        <p>Hi there! I’m Lyra, also known as lyraclx. I've been working with Python for about 8 years, gaining experience in various areas such as networking, machine learning, and data analysis. I’m passionate about using my skills to solve real-world problems and I'm always eager to learn new things.</p>
+        <p>Hi there! I’m Lyra, also known as lyraclx. I've been working with Python for about 8 years, gaining experience in various areas such as networking, machine learning, and data analysis. I’m passionate about using my skills to solve real-world problems and am always eager to learn new things.</p>
         <p>If you need someone to code for you or want to collaborate on a project, feel free to contact me! You can also check out my work on my GitHub, linked on this page.</p>
         <button class="contact-button" onclick="openModal()">Contact Me</button>
     </section>
@@ -201,6 +254,7 @@
         <p>Social Medias:</p>
         <ul>
             <li><a href="https://github.com/lyraclx" target="_blank">Github</a></li>
+            <li><a href="https://www.reddit.com/user/lyratcp/" target="_blank">Reddit</a></li>
             <li><a href="https://discord.com/" target="_blank">My discord username is: lyraclx</a></li>
         </ul>
     </div>
@@ -224,4 +278,3 @@
 
 </body>
 </html>
-<!-- Made by Lyraclx -->
