@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Me - Lyra</title>
-    <style>
+<style>
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             background-image: url('back5.jpg');
@@ -112,32 +112,32 @@
             top: 0;
             width: 100%;
             height: 100%;
+            justify-content: center;
+            align-items: center;
             overflow: auto;
             background-color: rgba(0, 0, 0, 0.7);
             backdrop-filter: blur(10px);
         }
 
         .modal-content {
-            position: absolute;
-            top: 50%;
-            left: 50%;
             background: rgba(45, 45, 45, 0.8);
             padding: 20px;
             border: 1px solid #888;
             width: 35%;
+            height: fit-content;
             border-radius: 10px;
             box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-            animation: pop-in 0.5s;
-            transform: translate(-50%, -50%);
+            animation: pop-in 0.3s;
         } 
 
         @keyframes pop-in {
             0% {
-                transform: scale(0);
+                transform: scaleX(0.8) scaleY(0);
+                filter: invert();
                 opacity: 0;
             }
             100% {
-                transform: scale(1);
+                transform: scaleX(1) scaleY(1);
                 opacity: 1;
             }
         }
@@ -147,13 +147,13 @@
             float: right;
             font-size: 28px;
             font-weight: bold;
+            cursor: pointer;
         }
 
         .close:hover,
         .close:focus {
             color: white;
             text-decoration: none;
-            cursor: pointer;
         }
 
         h1.modal-title {
@@ -227,7 +227,22 @@
             }
 
             .modal-content {
-                width: 90%;
+                width: 100%;
+                border-left: 0;
+                border-right: 0;
+                border-radius: 0;
+            }
+
+            @keyframes pop-in {
+                0% {
+                    opacity: 0;
+                    transform: scaleY(0);
+                    filter: invert();
+                }
+                100% {
+                    opacity: 1;
+                    transform: scaleY(1);
+                }
             }
         }
     </style>
@@ -264,7 +279,7 @@
 
 <script>
     function openModal() {
-        document.getElementById('contactModal').style.display = "block";
+        document.getElementById('contactModal').style.display = "flex";
     }
 
     function closeModal() {
